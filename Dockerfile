@@ -1,12 +1,12 @@
 FROM node:12.18.2-alpine3.12
 
-WORKDIR /usr/src/app
+WORKDIR /api
 
-COPY package*.json ./
+COPY package*.json /api/
 
 RUN npm install
 
-COPY . .
+COPY . /api/
 
 EXPOSE 8000
 

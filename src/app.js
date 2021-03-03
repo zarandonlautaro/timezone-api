@@ -10,6 +10,6 @@ app.use(bodyParser.json());
 app.use(cors(corsOptions));
 app.use("/timezones", require("./components/Timezones/timezones"));
 
-mongodb();
+mongodb.checkConection();
 
 module.exports = app;

@@ -38,7 +38,7 @@ const connectDB = async () => {
   }
 };
 
-module.exports = checkConection = async () => {
+module.exports.checkConection = async () => {
   if (isConected === false) {
     const conection = await connectDB();
     return conection;
