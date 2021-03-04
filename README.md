@@ -4,6 +4,22 @@ Is a Express JS application for dealing the timezone around the world.
 
 ## Installation
 
+#### First create and set up .env
+
+```bash
+ # Basics
+NODE_ENV=development
+PORT=8000
+
+# MONGO
+MONGO_USER=admin
+MONGO_PASS=admin
+MONGO_CLUSTER=mongo:27017
+MONGO_DB_NAME=timezones
+MONGO_COLLECTION_TIMEZONE=timezone
+API_TIMEZONES = "http://worldtimeapi.org/api/timezone"
+```
+
 #### USING DOCKER
 
 Attention before to make docker compose verify if you have both images _timezone-app_ & _image'timezone-api_
