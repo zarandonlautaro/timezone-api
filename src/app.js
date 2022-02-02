@@ -8,7 +8,7 @@ const mongodb = require("./db/mongoConnect");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
-app.use("/timezones", require("./components/Timezones/timezones"));
+app.use("/api/timezones", require("./components/Timezones/timezones"));
 
 mongodb.checkConection();
 
