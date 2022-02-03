@@ -2,7 +2,7 @@ require("dotenv").config();
 const app = require("express")();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const corsOptions = require("./utils/corsOptions");
+const corsOptions = require("./utils/cors");
 const mongodb = require("./db/mongoConnect");
 
 app.use(bodyParser.urlencoded({ extended: false }));
