@@ -55,6 +55,40 @@ router
         }),
     )
 
+    .post(
+        "/:continent/:country",
+        handleError(async (req, res) => {
+            const { continent, country } = req.params;
+            const findTimezone = `${continent}/${country}`;
+            const timezone = await getTimezone(findTimezone);
+            if (timezone) {
+                const newTimezone = await insertTimezone(timezone);
+                return res.status(200).json({
+                    body: newTimezone,
+                    success: true,
+                    message: "Congrulations timezone updated",
+                });
+            }
+        }),
+    )
+
+    .post(
+        "/:continent/:country/:city",
+        handleError(async (req, res) => {
+            const { continent, country, city } = req.params;
+            const findTimezone = `${continent}/${country}/${city}`;
+            const timezone = await getTimezone(findTimezone);
+            if (timezone) {
+                const newTimezone = await insertTimezone(timezone);
+                return res.status(200).json({
+                    body: newTimezone,
+                    success: true,
+                    message: "Congrulations timezone updated",
+                });
+            }
+        }),
+    )
+
     .delete(
         "/:id",
         handleError(async (req, res) => {
