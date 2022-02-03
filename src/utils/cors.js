@@ -1,7 +1,7 @@
 const whitelist = [
     "http://localhost:8000",
     "http://localhost:3000",
-    "https://timezone-app-two.vercel.app/",
+    "https://timezone-app-two.vercel.app",
 ];
 
 const corsOptions = (req, callback) => {
